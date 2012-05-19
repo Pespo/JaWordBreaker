@@ -1,11 +1,10 @@
 package fr.imac.jwbreaker;
 
 public class Main {
- 
-        public static void main(String[] args){
-        
-               WindowMenu fen = new WindowMenu();
-               
-               fen.setVisible(true);
-        }       
+	
+	public static void main(String[] args) {
+		MainWindow mainWindow = MainWindow.getInstance();
+		mainWindow.setVisible(true);
+    }
+
 }

@@ -48,6 +48,8 @@ import org.jbox2d.testbed.tests.Gears;
 import org.jbox2d.testbed.tests.LineJointTest;
 import org.jbox2d.testbed.tests.LiquidTest;
 import org.jbox2d.testbed.tests.OneSidedTest;
+import org.jbox2d.testbed.tests.Pespo;
+import org.jbox2d.testbed.tests.Pespo5;
 import org.jbox2d.testbed.tests.PolyShapes;
 import org.jbox2d.testbed.tests.PrismaticTest;
 import org.jbox2d.testbed.tests.Pulleys;
@@ -72,6 +74,9 @@ public class TestList {
   public static void populateModel(TestbedModel argModel){
       
       argModel.addCategory("Featured");
+      argModel.addTest(new Pespo5());
+      argModel.addTest(new Pespo());
+      
       argModel.addTest(new DominoTest());
       argModel.addTest(new CompoundShapesTest());
       argModel.addTest(new BlobTest4());

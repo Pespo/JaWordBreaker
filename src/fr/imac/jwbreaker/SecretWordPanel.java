@@ -10,11 +10,19 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class SecretWordPanel extends JPanel {
-	private JButton secretWordButton = new JButton("Valider");
-	private JLabel secretWordLabel = new JLabel("Mot secret :");
-	private JTextField secretWordTextField = new JTextField();
+
+	private static final long serialVersionUID = 1L;
+	
+	private JButton _secretWordButton;
+	private JLabel _secretWordLabel;
+	private JTextField _secretWordTextField;
 	
 	public SecretWordPanel() {
+		
+		_secretWordButton = new JButton("Valider");
+		_secretWordLabel = new JLabel("Mot secret :");
+		_secretWordTextField = new JTextField();
+		
 		initLayout();	
 		initConstraints();
 	}
@@ -32,17 +40,17 @@ public class SecretWordPanel extends JPanel {
 		constraint.gridwidth = 1;
 		constraint.gridheight = 1;
 		constraint.insets = new Insets(10, 0, 10, 10);
-		this.add(secretWordLabel, constraint);
+		this.add(_secretWordLabel, constraint);
 
 		//secretWord : textfield
 		constraint.gridx = 1;
 		constraint.ipadx = 100;
-		this.add(secretWordTextField, constraint);
+		this.add(_secretWordTextField, constraint);
 		
 		//secretWord : button
 		constraint.gridx = 2;
 		constraint.ipadx = 10;
-		this.add(secretWordButton, constraint);	
+		this.add(_secretWordButton, constraint);	
 	}
 	
 }
