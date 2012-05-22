@@ -12,12 +12,15 @@ public class GamePanel extends JPanel implements ActionListener {
 	
 	private static final long serialVersionUID = 9015559088800516054L;
 	
-	private JPanel _mainPanel;
+	private Board _mainPanel;
+	private Thread _gameThread;
 	private SecretWordPanel _secretWordPanel;
 	private SidePanel _sidePanel; public SidePanel get_sidePanel() { return _sidePanel; } public void set_sidePanel(SidePanel _sidePanel) {this._sidePanel = _sidePanel;}
 
 	public GamePanel() {
-		_mainPanel = new JPanel();
+		_mainPanel = new Board();
+		_gameThread = new Thread(_mainPanel);
+		_gameThread.start();
 		_secretWordPanel = new SecretWordPanel();
 		_sidePanel = new SidePanel();
 		
